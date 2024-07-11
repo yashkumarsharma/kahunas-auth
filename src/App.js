@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import { Provider } from 'react-redux'
 import { useStore } from 'container/StoreContext'
+import { AuthProvider } from 'container/AuthContext'
+
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 
-import NutritionPage from './containers/NutritionPage'
 import LandingPage from './containers/LandingPage'
 import i18n from './translations/i18n'
 
@@ -37,13 +38,14 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <Router basename='/auth'>
-        <Routes>
-          <Route path='/' element={<LandingPage />} />
-          <Route path='/nutrition' element={<NutritionPage />} />
-          <Route path='*' element={<Navigate to='/' />} />
-        </Routes>
-      </Router>
+      <AuthProvider>
+        <Router basename='/auth'>
+          <Routes>
+            <Route path='/' element={<LandingPage />} />
+            <Route path='*' element={<Navigate to='/' />} />
+          </Routes>
+        </Router>
+      </AuthProvider>
     </Provider>
   )
 }

@@ -1,13 +1,7 @@
 {
-  "welcome": "Welcome",
-  "description": "This is the main application.",
-  "landing-heading": "You can add following auth for your clients",
-  "Squats": "Squats",
-  "Push-ups": "Push-ups",
-  "Plank": "Plank",
-  "Lunges": "Lunges",
-  "Deadlifts": "Deadlifts",
-  "Nutrition Information": "Nutrition Information",
-  "Checkout Nutrition Page": "Checkout Nutrition Page",
-  "Auth": "Auth"
+  "Login": "Login",
+  "Logout": "Logout",
+  "Username-Email": "Username- or Email",
+  "Password": "Password",
+  "login-message": "You are logged in."
 }

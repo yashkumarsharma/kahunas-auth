@@ -1,29 +1,55 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { useAuth } from 'container/AuthContext'
 import { useTranslation } from 'react-i18next'
 
 import './styles.css'
 
+const TOKEN = 'dummy-token'
+
 const LandingPage = () => {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+
   const { t } = useTranslation()
+  const { isAuthenticated, login, logout } = useAuth()
+
+  const handleLogin = async () => {
+    try {
+      login(TOKEN)
+    } catch (err) {
+      //
+    }
+  }
 
   return (
     <div className='auth-landing-page'>
       <div className='auth-landing-content'>
-        <p className='title'>{t('Auth')}</p>
-        <p>{t('landing-heading')}</p>
-
-        <ul>
-          <li>{t('Squats')}</li>
-          <li>{t('Push-ups')}</li>
-          <li>{t('Deadlifts')}</li>
-          <li>{t('Lunges')}</li>
-          <li>{t('Plank')}</li>
-        </ul>
-      </div>
-
-      <div className='auth-landing-footer'>
-        <Link to='/nutrition'>{t('Checkout Nutrition Page')}</Link>
+        {!isAuthenticated && (
+          <div className='login-form'>
+            <h2>{t('Login')}</h2>
+            <input
+              type='text'
+              placeholder={t('Username-Email')}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+              type='password'
+              placeholder={t('Password')}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button onClick={handleLogin}>
+              {t('Login')}
+            </button>
+          </div>
+        )}
+        {isAuthenticated && (
+          <div className='logout-section'>
+            <p>{t('login-message')}</p>
+            <button onClick={logout}>{t('Logout')}</button>
+          </div>
+        )}
       </div>
     </div>
   )

@@ -1,13 +1,7 @@
 {
-  "welcome": "Bienvenue",
-  "description": "Ceci est l'application principale.",
-  "landing-heading": "Vous pouvez ajouter les exercices suivants pour vos clients",
-  "Squats": "Squats",
-  "Push-ups": "Pompes",
-  "Plank": "Planche",
-  "Lunges": "Fentes",
-  "Deadlifts": "Soulevés de terre",
-  "Nutrition Information": "Informations nutritionnelles",
-  "Checkout Nutrition Page": "Consultez la page nutrition",
-  "Auth": "Auth"
+  "Login": "Connexion",
+  "Logout": "Déconnexion",
+  "Username-Email": "Nom d'utilisateur ou Email",
+  "Password": "Mot de passe",
+  "login-message": "Vous êtes connecté."
 }
