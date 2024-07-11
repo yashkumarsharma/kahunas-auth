@@ -8,9 +8,9 @@ const LandingPage = () => {
   const { t } = useTranslation()
 
   return (
-    <div className='workouts-landing-page'>
-      <div className='workouts-landing-content'>
-        <p className='title'>{t('Workouts')}</p>
+    <div className='auth-landing-page'>
+      <div className='auth-landing-content'>
+        <p className='title'>{t('Auth')}</p>
         <p>{t('landing-heading')}</p>
 
         <ul>
@@ -22,7 +22,7 @@ const LandingPage = () => {
         </ul>
       </div>
 
-      <div className='workouts-landing-footer'>
+      <div className='auth-landing-footer'>
         <Link to='/nutrition'>{t('Checkout Nutrition Page')}</Link>
       </div>
     </div>

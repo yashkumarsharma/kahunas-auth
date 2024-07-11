@@ -1,6 +1,6 @@
 {
-  "name": "kahunas-workouts",
-  "homepage": "/workouts/",
+  "name": "kahunas-auth",
+  "homepage": "/auth/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

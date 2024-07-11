@@ -7,6 +7,6 @@ const root = createRoot(container)
 
 root.render(
   <React.StrictMode>
-    <App basePath='/workouts/' />
+    <App basePath='/auth/' />
   </React.StrictMode>
 )

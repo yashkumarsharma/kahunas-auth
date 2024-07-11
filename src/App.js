@@ -37,7 +37,7 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <Router basename='/workouts'>
+      <Router basename='/auth'>
         <Routes>
           <Route path='/' element={<LandingPage />} />
           <Route path='/nutrition' element={<NutritionPage />} />

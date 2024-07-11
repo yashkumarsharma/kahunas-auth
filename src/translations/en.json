@@ -1,7 +1,7 @@
 {
   "welcome": "Welcome",
   "description": "This is the main application.",
-  "landing-heading": "You can add following workouts for your clients",
+  "landing-heading": "You can add following auth for your clients",
   "Squats": "Squats",
   "Push-ups": "Push-ups",
   "Plank": "Plank",
@@ -9,5 +9,5 @@
   "Deadlifts": "Deadlifts",
   "Nutrition Information": "Nutrition Information",
   "Checkout Nutrition Page": "Checkout Nutrition Page",
-  "Workouts": "Workouts"
+  "Auth": "Auth"
 }
