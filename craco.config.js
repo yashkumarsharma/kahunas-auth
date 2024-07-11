@@ -30,8 +30,9 @@ module.exports = {
             'react-dom': { singleton: true },
             '@reduxjs/toolkit': { singleton: true },
             'react-redux': { singleton: true },
-            'react-i18next': { singleton: true },
-            'i18next': { singleton: true },
+            // Adding the below libraries replaced the translations
+            // 'react-i18next': { singleton: true },
+            // 'i18next': { singleton: true },
           },
         })
       )
