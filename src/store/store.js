@@ -1,9 +1,7 @@
-import { configureStore } from '@reduxjs/toolkit'
+// These reducers are provided back to container
+// eslint-disable-next-line import/prefer-default-export
+export const appReducers = {
 
-const store = configureStore({
-  reducer: {
-    // Your reducers go here
-  },
-})
+}
 
-export default store
+// No local store required

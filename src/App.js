@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { AuthProvider } from 'container/AuthContext'
-import { StoreProvider } from 'container/StoreContext'
 
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 
@@ -22,16 +21,14 @@ const App = () => {
   }, [language])
 
   return (
-    <StoreProvider>
-      <AuthProvider>
-        <Router basename='/auth'>
-          <Routes>
-            <Route path='/' element={<LandingPage />} />
-            <Route path='*' element={<Navigate to='/' />} />
-          </Routes>
-        </Router>
-      </AuthProvider>
-    </StoreProvider>
+    <AuthProvider>
+      <Router basename='/auth'>
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='*' element={<Navigate to='/' />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   )
 }
 

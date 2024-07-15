@@ -19,6 +19,7 @@ module.exports = {
           filename: 'remoteEntry.js',
           exposes: {
             './App': './src/App',
+            './Store': './src/store/store',
           },
           remotes: {
             container: isProduction
